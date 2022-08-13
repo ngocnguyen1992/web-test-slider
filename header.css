@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background: #474787;
+    min-height: 100vh;
+}
+header nav{
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+header .logo{
+    width: 50%;
+}
+header .menu{
+    width: 50%;
+}
+header .menu ul{
+    display: flex;
+    position: absolute;
+    font-family: 'Satisfy', cursive;
+    top: 20px;
+    font-weight: 650;
+}
+header .menu ul li a{
+    color: white;
+    padding: 0px 20px;
+}
+header::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: aqua;
+    position: absolute;
+    top : 0;
+    clip-path: circle(50% at 100% 0%);
+    z-index: 0;
+}
+header #banner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+header #banner .intro{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+header #banner .slider{
+    width: 50%;
+    text-align: center;
+    z-index: 1;
+}
+#banner .intro h2{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+#banner .intro{
+    color : white;
+    margin-top: 80px;
+    font-family: 'Satisfy', cursive;
+}
+.icons{
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    display: flex;
+}
+
+.icons .icon{
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+#banner .intro a{
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(to left, rgb(91, 91, 247), rgb(52, 81, 118));
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+    transition: .3s;
+}
+#banner .intro a:hover{
+    transform: translateY(-5px);
+}
+.icons .icon:hover {
+    transform: translateY(-10px);
+}
+
+@media screen and(max-width:991px) {
+    header #banner .intro{
+        width: 100%;
+    }
+    header #banner .slider{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 150px;
+    }
+    header #banner .slider .swiper{
+        width: 500px;
+    }
+}
